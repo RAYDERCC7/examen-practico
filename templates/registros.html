@@ -1,0 +1,56 @@
+<div class="table-responsive">
+    <table class="table table-sm">
+        <thead class="table-active">
+            <tr>
+                <th>Id</th>
+                <th>Alumno</th>
+                <th>Materia</th>
+                <th>Parcial</th>
+                <th>Calificación</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="tbodyRegistros">
+            <tr id="registrosCargando" class="text-center p-3" ng-if="sendingRequest && registros.length == 0">
+                <td colspan="6">
+                    <div class="spinner-border" role="status" style="width: 3rem; height: 3rem;">
+                        <span class="visually-hidden">Cargando...</span>
+                    </div>
+                </td>
+            </tr>
+
+            <tr id="registrosError" class="text-center p-3" ng-if="!sendingRequest && incompleteRequest && registros.length == 0">
+                <td colspan="6">
+                    <i class="bi bi-wifi-off" style="font-size: 2em;"></i>
+                    <p class="fw-bolder">Error en la petición.</p>
+                </td>
+            </tr>
+
+            <tr id="registrosEmpty" class="text-center p-3" ng-if="!sendingRequest && completeRequest && registros.length == 0">
+                <td colspan="6">
+                    <h5>No hay registros.</h5>
+                </td>
+            </tr>
+
+            <tr ng-repeat="r in registros" ng-if="!sendingRequest && registros.length">
+                <td>{{ '{{ r.id }}' }}</td>
+                <td>{{ '{{ r.alumno }}' }}</td>
+                <td>{{ '{{ r.materia }}' }}</td>
+                <td>{{ '{{ r.parcial }}' }}</td>
+                <td>{{ '{{ r.calificacion }}' }}</td>
+                <td>
+                    <button class="btn btn-sm btn-primary btn-editar-registro me-1 mb-1 while-waiting" data-index="{{ '{{ $index }}' }}" data-id="{{ '{{ r.id }}' }}">
+                        <i class="bi bi-pencil"></i>
+                        <span class="d-none d-lg-block d-xl-block">Editar</span>
+                    </button>
+                    <button class="btn btn-sm btn-danger btn-eliminar-registro me-1 mb-1 while-waiting" data-index="{{ '{{ $index }}' }}" data-id="{{ '{{ r.id }}' }}">
+                        <i class="bi bi-trash"></i>
+                        <span class="d-none d-lg-block d-xl-block">Eliminar</span>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="div-to-complete-screen"></div>

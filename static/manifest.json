@@ -1,0 +1,28 @@
+{
+  "name": "APP Bitacora",
+  "short_name": "APP Bitacora",
+  "icons": [
+      {
+        "src": "/static/favicon.png",
+        "sizes": "500x500",
+        "type": "image/png"
+      },
+      {
+        "src": "/static/favicon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "/static/favicon-maskable.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+      }
+  ],
+  "id": "/?source=pwa",
+  "start_url": "/?source=pwa",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#2596be",
+  "theme_color": "#2596be"
+}

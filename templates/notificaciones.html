@@ -1,0 +1,34 @@
+<div id="notificacionesActualizar" class="text-end m-2">
+    <button class="btn btn-lg btn-light btn-cargar-notificaciones p-2 while-waiting"><i class="bi bi-arrow-clockwise"></i></button>
+</div>
+
+<div id="notificacionesCargando" class="text-center p-3" ng-if="sendingRequest && registros.length == 0">
+    <div class="spinner-border" role="status" style="width: 3rem; height: 3rem;">
+        <span class="visually-hidden">Cargando...</span>
+    </div>
+</div>
+
+<div id="notificacionesError" class="text-center p-3" ng-if="!sendingRequest && incompleteRequest && registros.length == 0">
+    <i class="bi bi-wifi-off" style="font-size: 2em;"></i>
+    <p class="fw-bolder">Error en la petición.</p>
+</div>
+
+<div id="notificacionesEmpty" class="text-center p-3" ng-if="!sendingRequest && completeRequest && registros.length == 0">
+    <h5>No hay notificaciones.</h5>
+</div>
+
+<div id="notificaciones" class="list-group" ng-if="!sendingRequest && registros.length">
+    <div class="list-group-item list-group-item-action mb-1 {{ '{{ ((notificacion.READ == "1") ? "" : "active") }}' }}" style="cursor: pointer;" data-id="{{ '{{ notificacion.id }}' }}" aria-current="true" ng-repeat="notificacion in registros">
+        <div class="text-end m-2">
+            <button class="btn btn-lg btn-danger btn-eliminar-notificacion p-2 while-waiting" data-id="{{ '{{ notificacion.id }}' }}"><i class="bi bi-trash"></i></button>
+        </div>
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{ '{{ notificacion.titulo }}' }}</h5>
+            <small>{{ '{{ notificacion.fechaHora }}' }}</small>
+        </div>
+        <p class="mb-1 p-leer-notificacion while-waiting">{{ '{{ notificacion.contenido }}' }}</p>
+        <small></small>
+    </div>
+</div>
+
+<div class="div-to-complete-screen"></div>

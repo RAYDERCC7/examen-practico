@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="angularjsApp" style="overflow-x: hidden; overflow-y: scroll;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#2596be">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="/static/favicon.ico" sizes="128x128">
+    <link rel="shortcut icon" href="/static/favicon.ico">
+    <link rel="apple-touch-icon" href="/static/favicon.ico">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- JQuery Validate -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.min.js"></script>
+
+    <!-- AngularJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js" integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js" integrity="sha512-y1qD3hz/IAf8W4+/UMLZ+CN6LIoUGi7srWJ3r1R17Hid8x0yXe+1B5ZelkaL1Mjzedzu0Cg3HBvDG02SAgSzBw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.5.0/luxon.min.js" integrity="sha512-SN7iwxiJt9nFKiLayg3NjLItXPwRfBr4SQSIugMeBFrD4lIFJe1Z/exkTZYAg3Ul+AfZEGws2PQ+xSoaWfxRQQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/themes/dark.min.css" integrity="sha512-9j8LE+fuBZgXOsSyiXCw0LmM4LSLIo94AYem4pQzyqlbw5wC4qK2ytHjOLy9pGH3DbvoXawLPuiVfr8gXOKXWw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js" integrity="sha512-K/oyQtMXpxI4+K0W7H25UopjM8pzq0yrVdFdG21Fh5dBe91I40pDd9A4lzNlHPHBIP2cwZuoxaUSX0GJSObvGA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/l10n/es.min.js" integrity="sha512-qNFoLkoKxYYiUEW14iAJbDcNsfoLTNznoq7UTa5xUp23NmGnlgC/pPWzN5kMcQC4bm+eFx2ibqelc3ARWf+SJw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsencrypt/3.3.2/jsencrypt.min.js" integrity="sha512-94ncgEEqkuZ4yNTFmu2dSn1TJ6Ij+ANQqpR7eLVU99kzvYzu6UjBxuVoNHtnd29R+T6nvK+ugCVI698pbyEkvQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/1.33.1/plotly.min.js" integrity="sha512-V0j9LhrK9IMNdFYZqh+IqU4cjo7wdxyHNyH+L0td4HryBuZ7Oq6QxP2/CWr6TituX31+gv5PnolvERuTbz8UNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.0/css/dataTables.bootstrap5.min.css" />
+    <script src="https://cdn.datatables.net/2.3.0/js/dataTables.min.js" defer></script>
+    <script src="https://cdn.datatables.net/2.3.0/js/dataTables.bootstrap5.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/4.0.1/css/fixedHeader.bootstrap5.min.css" />
+    <script src="https://cdn.datatables.net/fixedheader/4.0.1/js/dataTables.fixedHeader.min.js" defer></script>
+    <script src="https://cdn.datatables.net/fixedheader/4.0.1/js/fixedHeader.bootstrap5.min.js" defer></script>
+
+    <title>APP / Dashboard</title>
+
+    <!-- CSS -->
+    <style>.form-control:focus {box-shadow: none !important;} label.is-invalid {padding: 3px; margin: 3px; border-radius: 3px; font-weight: bold; width: 100%;} .dt-length select, .dt-search input {font-size: 1.25rem;} html, body {overflow-x: hidden;}</style>
+
+    <!-- CSS: Swipes -->
+    <style>#appSwipeContainer {position: relative; width: 100vw; height: 100%; overflow: hidden; user-select: none;} #appSwipeWrapper {display: flex; width: 300vw; transform: translateX(-100vw); will-change: transform;} #appContentLeft, #appContent, #appContentRight {flex: 0 0 100vw; max-width: 100vw; box-sizing: border-box; display: block; width: 100vw; overflow-x: hidden; padding: 1rem;}</style>
+
+    <!-- JS: Utils/functions.js -->
+    <script>
+        function saveEntryCursorPosition(t,o){if(!("selectionStart"in t))return;let e=[t.selectionStart,t.selectionEnd];o(e),e.length&&(t.selectionStart=e[0],t.selectionEnd=e[1])}function likeText(t,o){try{return RegExp(t,"i").test(o)}catch(e){try{return -1!=o.indexOf(t)}catch(a){return!0}}}function textboxEntryPattern(t,o){saveEntryCursorPosition(t,function(e){let a=t.value.split(""),s=0;for(let n in a)!likeText("["+o+"]",a[n])&&(a[n]="",s++);t.value=a.join(""),e[0]-=s,e[1]-=s})}function textboxEntryCase(t,o){saveEntryCursorPosition(t,function(){let e=t.value;if("u"==o)t.hasAttribute("autocapitalize")||t.setAttribute("autocapitalize","characters"),e=e.toUpperCase();else if("l"==o)t.hasAttribute("autocapitalize")||t.setAttribute("autocapitalize","off"),e=e.toLowerCase();else if("c"==o){t.hasAttribute("autocapitalize")||t.setAttribute("autocapitalize","words");let a=e.split(" ");for(let s in a){let n=a[s].split("");if(n.length)for(let l in n){let i=n[l];if(likeText("[a-z]",i)){n[l]=i.toUpperCase();break}}a[s]=n.join("")}e=a.join(" ")}t.value=e})}function toast(t,o,e){if(o=o?1e3*o:3e3,t){if(null==document.getElementById("toast-message")){let a=$("<div />");a.addClass("p-2 rounded").attr("id","toast-message").css({background:"#000",color:"#fff",position:"fixed",bottom:"1%",left:"1%",right:"1%",textAlign:"center",zIndex:"999999"}).hide(),$("body").append(a)}$("#toast-message").html(t).fadeToggle(o,function(t){$(this).fadeToggle(o,function(t){$(this).remove(),"function"==typeof e&&e()})})}}function modal(t,o,e,a){let s=`<div class="modal fade" id="modal-message" tabindex="-1" role="dialog" aria-labelledby="modal-message-title" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header ${a=a||""}">
+                            <h5 class="modal-title" id="modal-message-title">${o=o||""}</h5>
+                            <button type="button" class="close btn-close" data-dismiss="modal" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">${t}</div>
+                        <div class="modal-footer"></div>
+                    </div>
+                </div>
+            </div>`;if($("body").append(s),$("#modal-message").on("show.bs.modal",function(t){"function"==typeof plus_modal_onshow&&plus_function_catch_errors(plus_modal_onshow)}),$("#modal-message").on("shown.bs.modal",function(t){"function"==typeof plus_modal_onshown&&plus_function_catch_errors(plus_modal_onshown),$("#modal-message button.modal-default-button").focus()}),$("#modal-message").on("hide.bs.modal",function(t){"function"==typeof plus_modal_onhide&&plus_function_catch_errors(plus_modal_onhide)}),$("#modal-message").on("hidden.bs.modal",function(t){"function"==typeof plus_modal_onhidden&&plus_function_catch_errors(plus_modal_onhidden),$("#modal-message").remove()}),$("#modal-message").modal("show"),$("#modal-message .modal-footer").html(""),"object"==typeof e)for(let n in e){let l=e[n],i=l.defaultButton,d=l.class,r=l.fun,c=l.dismiss,u=l.attributes,f=document.createElement("button");if(f.innerHTML=l.html,"boolean"==typeof i&&i&&(d?d+=" modal-default-button":d="modal-default-button"),"string"==typeof d&&(f.className=d),"function"==typeof r&&f.addEventListener("click",r),"boolean"==typeof c&&(f.setAttribute("data-dismiss","modal"),f.setAttribute("data-bs-dismiss","modal")),"object"==typeof u)for(let m in u)f.setAttribute(m,u[m]);$("#modal-message .modal-footer").append(f)}}function closeModal(){$("#modal-message").modal("hide")}function popover(t,o,e,a,s,n){n=n||"";let l='<div class="text-right">';for(let i=0;i<s.length;i++){let d=s[i],r=d.html,c=d.class;"string"!=typeof c&&(c=""),l+=`<span class="${o}_popover-btn-${i} ${c}">
+                    ${r}
+                </span>&nbsp;`}l+="</div>",$(t).popover({container:"body",html:!0,title:a,content:e+l,template:`<div class="popover" role="tooltip">
+                    <div class="arrow"></div>
+                    <h3 class="popover-header ${n}"></h3>
+                    <div class="popover-body"></div>
+                </div>`}),$(t).on("shown.bs.popover",function(e){for(let a=0;a<s.length;a++){let n=s[a],l=n.id,i=n.dismiss,d=n.fun;$(`.${o}_popover-btn-${a}`).each(function(o,e){!$(e).attr("data-id")&&($(e).attr("data-id",l),"boolean"==typeof i?i&&$(e).click(function(o){closePopover(t)}):"function"==typeof d&&$(e).click(d))})}})}function closePopover(t){$(t).popover("hide")}function pop(t,o,e){e=e||"danger",$(t).prepend(`
+                <div class="alert alert-${e} alert-dismissible fade show m-2" role="alert">
+                    <button type="button" class="close btn-close" data-dismiss="alert" data-bs-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    ${o}
+                </div>
+            `)}function plus_function_catch_errors(t){try{t()}catch(o){console.log("Error: La funcion",t," provoco un error"),console.error(o)}}function plus_modal_onshow(){}function plus_modal_onshown(){}function plus_modal_onhide(){}function plus_modal_onhidden(){}
+    </script>
+
+    <!-- JS: Color-mode.js -->
+    <script>
+        /*!
+        * Color mode toggler for Bootstrap's docs (getbootstrap.com/)
+        * Copyright 2011-2022 The Bootstrap Authors
+        * Licensed under the Creative Commons Attribution 3.0 Unported License.
+        */
+        let bootstrapTheme=localStorage.getItem("theme");function colormode_onchange(e){}function getPreferredTheme(){return bootstrapTheme||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}function detectSystemTheme(){return window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}function filterTheme(e){return"auto"==e?detectSystemTheme():e}function setTheme(e){document.documentElement.setAttribute("data-bs-theme",filterTheme(e))}function showActiveTheme(e){$("[data-bs-theme-value]").removeClass("bg-primary text-white active"),$(`[data-bs-theme-value="${e}"]`).addClass("bg-primary text-white active")}$(document).on("click","[data-bs-theme-value]",function(e){bootstrapTheme=$(this).attr("data-bs-theme-value"),localStorage.setItem("theme",bootstrapTheme),setTheme(bootstrapTheme),showActiveTheme(bootstrapTheme),colormode_onchange(bootstrapTheme)}),document.addEventListener("DOMContentLoaded",function(e){setTheme(bootstrapTheme=getPreferredTheme()),showActiveTheme(bootstrapTheme)});
+    </script>
+
+    <script src="https://js.pusher.com/8.4.0/pusher.min.js"></script>
+    <script src="{{ url_for("static", filename="js/app.js") }}"></script>
+</head>
+<body>
+    <div id="appSpinnerGrow" ng-if="spinnerGrow">
+        <div class="text-center p-5 m-5">
+            <div class="spinner-grow p-5 m-5" style="width: 80px; height: 80px;" role="status">
+                <span class="visually-hidden">Cargando...</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="appSplash" class="bg-body text-body" style="z-index: 8; position: fixed; top: 0; bottom: 0; left: 0; right: 0; display: none;">
+        <div class="text-center">
+            <img fetchpriority="high" class="rounded mt-2" src="/static/favicon.png" alt="Logo" width="150" height="150">
+            <div style="position: absolute; bottom: 25%; left: 2.5%; right: 2.5%;">
+                <h5>APP Bitácora de Registros</h5>
+                <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+                    <span class="visually-hidden">Cargando...</span>
+                </div>
+                <div id="appSplashTextoProgreso">Comenzando descarga...</div>
+            </div>
+        </div>
+        <div class="text-end" style="position: absolute; bottom: 5%; left: 2.5%; right: 2.5%;">
+            <p class="mt-2" style="font-size: 10px;">Si el progreso se queda donde mismo por más de 30 segundos presiona <u onclick="document.getElementById('appSplash').style.display = 'none';" style="cursor: pointer;">aquí</u>.</p>
+        </div>
+    </div>
+
+    <div id="appBanner" class="row bg-body-tertiary text-body ng-hide" ng-show="!spinnerGrow">
+        <div id="appHeader" class="order-1 order-sm-1 order-md-1 order-lg-2 order-xl-2 order-xxl-2 col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2 text-end fw-bolder" style="font-size: 1.25rem;">
+            <i class="bi bi-clock"></i>
+            {{ '{{ angularjsHora }}' }}
+            <button class="btn btn-lg btn-cerrar-sesion ng-hide text-body" ng-show="login">
+                <i class="bi bi-box-arrow-right"></i>
+            </button>
+        </div>
+    
+<div id="appMenu" class="order-2 order-sm-2 order-md-1 order-lg-1 order-xl-1 order-xxl-1 col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 col-xxl-10">
+    <ul class="nav nav-underline justify-content-center nav-fill ms-1 me-1">
+        <li class="nav-item ng-hide" ng-show="!login">
+            <a class="nav-link text-body invisible" href="#/">
+                <i class="bi bi-box-arrow-right" style="font-size: 1.25em;"></i>
+                <span class="d-none d-lg-block d-xl-block">Iniciar Sesion</span>
+            </a>
+        </li>
+        <li class="nav-item ng-hide" ng-show="login">
+            <a class="nav-link text-body" href="#/registros">
+                <i class="bi bi-card-checklist" style="font-size: 1.25em;"></i>
+                <span class="d-none d-lg-block d-xl-block">Registros</span>
+            </a>
+        </li>    
+        </ul>
+</div>
+    </div>
+
+    <div id="appSubmenus" class="container ng-hide" ng-show="!spinnerGrow">
+        <nav aria-label="breadcrumb ng-hide" ng-show="path.indexOf('/registro') != -1">
+            <ol class="breadcrumb" style="height: 35px;">
+                <li class="breadcrumb-item">
+                    <a href="#registros" class="text-body ng-hide" ng-show="path.indexOf('/registros/') != -1">Registros</a>
+                    <span class="ng-hide" ng-show="path == '/registros'">Registros</span>
+                </li>
+                <li class="breadcrumb-item">
+                    <span class="ng-hide" ng-show="!registro.id && !sendingRequest">
+                        <i class="bi bi-plus-square"></i>
+                         <a href="#registros/nuevo" class="text-body ng-hide" ng-show="path == '/registros'">Nuevo</a>
+                         <span class="ng-hide" ng-show="path.indexOf('/registros/') != -1">Nuevo</span>
+                    </span>
+                    <span class="ng-hide" ng-show="sendingRequest">Cargando...</span>
+                    <span class="ng-hide" ng-show="registro.id && !sendingRequest">
+                         # {{ '{{ registro.id }}' }}
+                    </span>
+                </li>
+            </ol>
+        </nav>
+    </div>
+    
+    <div id="app" class="ng-hide" ng-show="!spinnerGrow">
+        <div id="appSwipeContainer">
+            <div id="appSwipeWrapper" style="cursor: grab;">
+                <div id="appContentLeft" style="visibility: hidden;">
+                    <div style="position: relative; top: 25%; left: 0; text-align: center; visibility: hidden;" data-href="{{ '{{ leftViewLink }}' }}">
+                        <h5>{{ '{{ leftView }}' }}</h5>
+                        <div class="spinner-border" style="width: 5rem; height: 5rem;" role="status">
+                            <span class="visually-hidden">Cargando...</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="appContent" class="{{ '{{ slide }}' }}" ng-view></div>
+                <div id="appContentRight" style="visibility: hidden;">
+                    <div style="position: relative; top: 25%; left: 0; text-align: center; visibility: hidden;" data-href="{{ '{{ rightViewLink }}' }}">
+                        <h5>{{ '{{ rightView }}' }}</h5>
+                        <div class="spinner-border" style="width: 5rem; height: 5rem;" role="status">
+                            <span class="visually-hidden">Cargando...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="appSpace" style="height: 4rem;"></div>
+
+    <div id="appButtonAppearanceTheme" style="z-index: 7; position: fixed; bottom: 5px; left: 5px; cursor: pointer; font-size: 1.25rem;">
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item" data-bs-theme-value="light">
+                <i class="bi bi-sun-fill"></i>
+            </li>
+            <li class="list-group-item" data-bs-theme-value="dark">
+                <i class="bi bi-moon-stars-fill"></i>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

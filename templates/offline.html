@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="robots" content="noindex, nofollow">
+
+    <meta name="theme-color" content="#2596be">
+    <link rel="icon" href="/static/favicon.ico" sizes="128x128">
+    <link rel="shortcut icon" href="/static/favicon.ico">
+    <link rel="apple-touch-icon" href="/static/favicon.ico">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+    <title>Se necesita internet</title>
+</head>
+<body>
+    <div class="alert alert-info" style="position: absolute; top: 37.5%; left: 12.5%; right: 12.5%; text-align: center;">
+        <i class="bi bi-wifi-off text-center" style="font-size: 2em;"></i>
+        <p class="text-center fw-bolder">Se necesita una conexión de internet estable en este momento.</p>
+        <div class="text-end">
+            <button class="btn btn-link" onclick="history.back();">Regresar</button>
+            <button class="btn btn-primary while-waiting" onclick="window.location = location.href;">Reintentar</button>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener("online", function (event) {
+            window.location = location.href;
+        })
+
+        // validateOnline();
+    </script>
+</body>
+</html>

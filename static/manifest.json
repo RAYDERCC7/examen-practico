@@ -1,6 +1,6 @@
 {
-  "name": "APP Bitacora",
-  "short_name": "APP Bitacora",
+  "name": "APP Calificaciones Alumnos",
+  "short_name": "APP Calificaciones",
   "icons": [
       {
         "src": "/static/favicon.png",

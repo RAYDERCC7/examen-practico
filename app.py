@@ -68,10 +68,12 @@ def appLogin():
     # return "<h5>Hola, soy la view app</h5>"
 
 @app.route("/registros")
+@login
 def registros():
     return render_template("registros.html")
 
 @app.route("/registro")
+@login
 def registro():
     return render_template("registro.html")
 
